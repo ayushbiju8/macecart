@@ -1,12 +1,12 @@
 
+import AboutSmall from './about/AboutSmall'
 import './App.css'
-import Login from './LoginandSignup/Login'
 
 function App() {
 
   return (
     <>
-      <Login/>
+      
     </>
   )
 }
