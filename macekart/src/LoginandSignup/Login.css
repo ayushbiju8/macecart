@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;700&display=swap');
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the background covers the entire viewport */
+    margin: 0;
+    background-color: #ffb800; /* Keeps the background color */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures any background image covers the viewport */
+    font-family: Arial, sans-serif;
+}
+
+.comp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.LEFT {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-position: center; /* Centers the image */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RIGHT {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Heading styling */
+.heading {
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease;
+}
+
+/* Subheading styling */
+.subheading {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    transition: transform 0.3s ease;
+}
+
+
+/* Container styling */
+.container {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    margin-left: -130px;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.componentsofsignup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.componentsofsignup input:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Alternatively, you can target them individually if needed */
+#username:hover, #password:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.componentsofsignup input {
+    height: 60px;
+    width: 290px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    padding-left: 30%;
+    margin-left: 50px;
+}
+
+.register-btn {
+    background-color: rgb(252, 251, 248);
+    position: relative;
+    color: rgb(23, 23, 23);
+    width: 180px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 3;
+    transition: background-color 0.3s, transform 0.3s;
+    left: 10px;
+    top: -50px;
+    height: 50px;
+}
+
+.register-btn:hover {
+    background-color: rgb(250, 213, 4);
+    transform: scale(1.05);
+    color: white;
+}
+
+.register-btn:active {
+    background-color: #e9fe05;
+    transform: scale(0.95);
+}
+
+.terms {
+    font-size: 14px;
+    z-index: 4;
+    position: relative;
+    top: -75px;
+    left: 90px;
+    color: black;
+}
+
+.terms a {
+    color: black;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: white;
+    text-decoration: underline;
+}
