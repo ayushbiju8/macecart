@@ -49,6 +49,10 @@
 .cardbox {
     scrollbar-width: none;
 }
+.custom-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from the parent element, or set your preferred color */
+  }
 
 .card {
     width: 250px;
@@ -66,6 +70,11 @@
     justify-content: space-evenly;
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
     scroll-snap-align: center;
+    cursor:  pointer;
+
+}
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.37);
 }
 .card>img{
     width: 200px;
@@ -86,6 +95,16 @@
     border: none;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
     border-radius: 10px;
+    cursor: pointer;   
+    border: 2px solid transparent;
+    transition: border 0.5s ease, transform 0.2s ease; 
+}
+.allproducts:hover{
+    background-color: #ffde89;
+    border: 2px solid #ffd773;
+}
+.allproducts:active{
+    transform: scale(1.02); 
 }
 .fullcenter{
     width: 100%;
@@ -93,4 +112,4 @@
     justify-content: center;
     height: calc(100vh - 600px);
     align-items: center;
-}
+  }

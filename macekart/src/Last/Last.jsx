@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './secondPage.css';
-import { Link } from "react-router-dom"
+import React, { useRef, useEffect, useState } from 'react'
+import "./Last.css"
 import img1 from "../assets/react.svg"
-function SecondPage() {
+function Last() {
   const cardboxRef = useRef(null);
   const [activeCard, setActiveCard] = useState(null);
   let cardList = [
@@ -48,29 +47,34 @@ function SecondPage() {
       cardbox.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   return (
-    <div className="SecondPage">
-      <div className="headingbox">
-        <h4>MACEKART.IN</h4>
-        <h1>Find your Perfect Wear</h1>
+    <div className='last'>
+      <div className='AboutSmallx'>
+        <div className="aleftx">
+          <h1>Good Quality Dress</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis sapiente dignissimos, expedita harum cum possimus voluptate sequi dolorem, saepe minima officia suscipit quasi unde cumque, quia veritatis minus architecto dolorum earum incidunt? Quod vel, doloremque praesentium cum sunt ipsam impedit excepturi quisquam beatae possimus, aliquid explicabo, omnis dignissimos accusamus.</p>
+          <div className='fullcentery'>
+            <button className='allproductsy'>SHOP NOW</button>
+          </div>
+        </div>
+        <div className="arighty">
+        </div>
       </div>
-      <div className="cardbox" ref={cardboxRef}>
+      <div className='lastcenter'>
+        <h1>Recommended For You</h1>
+      </div>
+
+      <div className="cardboxx" ref={cardboxRef}>
         {cardList.map((obj, index) => (
-          <Link to="/product" className='custom-link'>
-            <div key={index} className={`card ${activeCard && activeCard.textContent.includes(obj.card) ? 'active' : ''}`}>
-              <img src={img1} alt="img" />
-              <h4>{obj.card}</h4>
-              <h4>{obj.price}</h4>
-            </div>
-          </Link>
+          <div key={index} className={`cardx ${activeCard && activeCard.textContent.includes(obj.card) ? 'activex' : ''}`}>
+            <img src={img1} alt="img" />
+            <h4>{obj.card}</h4>
+            <h4>{obj.price}</h4>
+          </div>
         ))}
       </div>
-      <div className='fullcenter'>
-        <Link to="/allproducts"><button className='allproducts' >ALL PRODUCTS</button></Link>
-      </div>
     </div>
-  );
+  )
 }
 
-export default SecondPage;
+export default Last

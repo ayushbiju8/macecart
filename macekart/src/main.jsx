@@ -6,6 +6,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Third from './ThirdPage/Third.jsx'
 import Login from './LoginandSignup/Login.jsx'
 import Signup from './LoginandSignup/Signup.jsx'
+import Last from './Last/Last.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/signup',  
     element: <Signup />,  
+  },
+  {
+    path: '/product',  
+    element: <Last />,  
   },
 ]);
   

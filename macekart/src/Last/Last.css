@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.last {
+    width: 100%;
+    /* height: 100vh; */
+    background-color: #ffca42;
+    font-family: "Inter", system-ui;
+}
+
+.AboutSmallx {
+    background-color: #ffca42;
+    min-height: 400px;
+    width: 100%;
+    /* color: white; */
+    /* border: 2px solid white; */
+    display: flex;
+    font-family: "Inter", system-ui;
+}
+.lastcenter{
+    height: 50px;
+}
+.aleftx {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.aleftx>h1 {
+    text-align: start;
+    width: 80%;
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.aleftx>p {
+    text-align: start;
+    width: 80%;
+    /* font-weight: 600; */
+}
+
+.arighty{
+    flex: 1;
+    /* border: 2px solid red; */
+}
+
+.allproductsy {
+    width: 160px;
+    height: 55px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+}
+
+.fullcentery {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    /* height: calc(100vh - 600px); */
+    align-items: center;
+}
+
+
+
+.cardboxx {
+    display: flex;
+    height: calc(100vh - 450px);
+    
+    width: 100%;
+    margin: auto;
+    overflow-x: auto;
+    gap: 50px;
+    scroll-behavior: smooth;
+    align-items: center;    
+}
+
+.cardboxx::-webkit-scrollbar {
+    display: none;
+}
+
+.cardboxx {
+    scrollbar-width: none;
+}
+
+.cardx {
+    width: 250px;
+    height: 280px;
+    background-color: #FFCA40;
+    flex: 0 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    scroll-snap-align: center;
+}
+.cardx>img{
+    width: 200px;
+    height: 150px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.cardx.activex {
+    /* Move the active card up */
+    transform: translateY(-30px); /* Move up */
+}
+
+.lastcenter{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
