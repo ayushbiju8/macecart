@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./Third.css"
 import img1 from '../assets/d.svg'
 import img2 from '../assets/react.svg'
+import { Link } from "react-router-dom"
 function Third() {
   const [openDropdown, setOpenDropdown] = useState(null); // Tracks which dropdown is open
 
@@ -98,14 +99,16 @@ function Third() {
         </div>
       </div>
       <div className="productscontainer">
-      {productList.map((product) => (
-        <div key={product.id} className="products">
-          <img src={product.imgSrc} alt={`Product ${product.id}`} />
-          <h4>$ {product.price}</h4>
-          <a href={product.link} target="_blank" rel="noopener noreferrer">Whatsapp</a>
-        </div>
-      ))}
-    </div>
+        {productList.map((product) => (
+           <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }} key={product.id}>
+           <div className="products">
+             <img src={product.imgSrc} alt={`Product ${product.id}`} />
+             <h4>$ {product.price}</h4>
+             <a href={product.link} target="_blank" rel="noopener noreferrer">Whatsapp</a>
+           </div>
+         </Link>
+        ))}
+      </div>
     </div>
   )
 }

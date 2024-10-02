@@ -112,7 +112,17 @@
     /* justify-content: space-evenly; */
     border-radius: 8px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    cursor: pointer;
 }
 .products>img{
     height: 130px;
+}
+.products>a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+.products:hover{
+    border-color: #000000;
+    box-shadow: 0 0 10px #000000;
 }

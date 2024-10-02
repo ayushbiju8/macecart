@@ -1,21 +1,32 @@
 import React, { useRef, useEffect, useState } from 'react'
 import "./Last.css"
 import img1 from "../assets/react.svg"
+import { useParams } from 'react-router-dom';
+
+const productList = [
+  { id: 1, price: 1299, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 2, price: 1399, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 3, price: 1499, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 4, price: 1599, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 5, price: 1699, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 6, price: 1799, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 7, price: 1899, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 8, price: 1999, imgSrc: img1, link: 'https://wa.me/1234567890' },
+  { id: 9, price: 2099, imgSrc: img1, link: 'https://wa.me/1234567890' },
+];
+
 function Last() {
   const cardboxRef = useRef(null);
   const [activeCard, setActiveCard] = useState(null);
-  let cardList = [
-    { card: "Card 1", price: "$10" },
-    { card: "Card 2", price: "$15" },
-    { card: "Card 3", price: "$20" },
-    { card: "Card 4", price: "$25" },
-    { card: "Card 5", price: "$30" },
-    { card: "Card 6", price: "$35" },
-    { card: "Card 7", price: "$40" },
-    { card: "Card 8", price: "$45" },
-    { card: "Card 9", price: "$50" },
-    { card: "Card 10", price: "$55" }
-  ];
+  const { productId } = useParams(); // Get the product ID from the URL
+
+  // Find the product details from the productList using the productId
+  const product = productList.find((p) => p.id === parseInt(productId));
+
+  if (!product) {
+    return <h2>Product not found</h2>;
+  }
+
   useEffect(() => {
     const cardbox = cardboxRef.current;
 
@@ -47,27 +58,31 @@ function Last() {
       cardbox.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <div className='last'>
       <div className='AboutSmallx'>
         <div className="aleftx">
           <h1>Good Quality Dress</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis sapiente dignissimos, expedita harum cum possimus voluptate sequi dolorem, saepe minima officia suscipit quasi unde cumque, quia veritatis minus architecto dolorum earum incidunt? Quod vel, doloremque praesentium cum sunt ipsam impedit excepturi quisquam beatae possimus, aliquid explicabo, omnis dignissimos accusamus.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati blanditiis sapiente dignissimos...</p>
+          <p className='bolder'>Price: {product.price}</p>
           <div className='fullcentery'>
             <button className='allproductsy'>SHOP NOW</button>
           </div>
         </div>
         <div className="arighty">
+          <img src={product.imgSrc} alt={`Product ${product.id}`} />
         </div>
       </div>
+
       <div className='lastcenter'>
         <h1>Recommended For You</h1>
       </div>
 
       <div className="cardboxx" ref={cardboxRef}>
-        {cardList.map((obj, index) => (
+        {productList.map((obj, index) => (
           <div key={index} className={`cardx ${activeCard && activeCard.textContent.includes(obj.card) ? 'activex' : ''}`}>
-            <img src={img1} alt="img" />
+            <img src={obj.imgSrc} alt={`Product ${obj.id}`} />
             <h4>{obj.card}</h4>
             <h4>{obj.price}</h4>
           </div>
@@ -77,4 +92,4 @@ function Last() {
   )
 }
 
-export default Last
+export default Last;
