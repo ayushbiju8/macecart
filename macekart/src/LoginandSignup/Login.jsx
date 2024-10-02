@@ -12,22 +12,23 @@ function Login() {
           </div>
           <div className="RIGHT">
             <div className="title">
-              <p className="subheading">Welcome To</p>
-              <p className="heading">MACEKART</p>            </div>
+              <p className="subheadingoflogin">Welcome To</p>
+              <p className="headingoflogin">MACEKART</p>      
+          </div>
 
-            <div className="container">
-              <div className="componentsofsignup">
-                  <input type="text" id="username" name="username" placeholder="Username" />
-                  <input type="password" id="password" name="password" placeholder="Password" />
+            <div className="containeroflogin">
+              <div className="componentsoflogin">
+                  <input type="text" id="usernameoflogin" name="usernameoflogin" placeholder="Username" />
+                  <input type="password" id="passwordoflogin" name="passwordoflogin" placeholder="Password" />
 
               </div>
             </div>
-            <div className="terms">
+            <div className="termsofLogin">
               <a href="#">Forgot Password</a>
             </div>
 
             <div className="LOGIN">
-              <button className="register-btn">LOGIN</button>
+              <button className="Login-btn">LOGIN</button>
             </div>
           </div>
 

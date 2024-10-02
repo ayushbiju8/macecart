@@ -1,0 +1,188 @@
+
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px);
+    margin: 0;
+    background-color: #ffb800; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+
+.comp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.LeftofSignup {
+    width: 250px;
+    height: 500px;
+    border-radius: 30px;
+    margin-right: -9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #0c0c0c;
+}
+
+.RightofSignup {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    right: -200px;
+}
+
+
+
+.heading {
+    position: relative;
+    font-size: xx-large;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.subheading {
+    position: relative;
+    font-size: large;
+    color: #F3F8FF;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    width: 650px;
+    height: 400px;
+    margin: 20px 0 12px 0;
+    z-index: 3;
+    top: 40px;
+}
+
+.componentsofsignup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.componentsofsignupleftside,
+.componentsofsignuprightside {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.componentsofsignup input {
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    padding-left: 15px;
+}
+
+.componentsofsignup input:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.title {
+    position: relative;
+    top: 22px;
+    text-align: center;
+    z-index: 3;
+    font-size: x-large;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    z-index: 3;
+    font-size: large;
+    position: relative;
+    color: aliceblue;
+    top: 30px;
+}
+
+.signin {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.Signup-btn {
+    background-color: white;
+    position: relative;
+    color: black;
+    width: 400px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 3;
+    transition: background-color 0.3s, transform 0.3s;
+    top: -10px;
+}
+
+.Signup-btn:hover {
+    background-color: #e9fe05;
+    transform: scale(1.05);
+    color: white;
+
+}
+
+.Signup-btn:active {
+    transform: scale(0.95);
+}
+
+.terms {
+    margin-top: 20px;
+    font-size: 14px;
+    z-index: 4;
+    position: relative;
+    top: -20px;
+    left: -80px;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.terms a {
+    color: white;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+

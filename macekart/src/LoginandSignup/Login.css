@@ -12,7 +12,7 @@
     font-family: Arial, sans-serif;
 }
 
-.comp {
+.compoflogin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@
 }
 
 /* Heading styling */
-.heading {
+.headingoflogin {
     font-family: 'Bebas Neue', sans-serif;
     position: relative;
     font-size: 50px;
@@ -52,7 +52,7 @@
 }
 
 /* Subheading styling */
-.subheading {
+.subheadingoflogin {
     font-family: 'Playfair Display', serif;
     font-size: 45px;
     color: white;
@@ -63,7 +63,7 @@
 
 
 /* Container styling */
-.container {
+.containeroflogin {
     position: relative;
     justify-content: space-between;
     display: flex;
@@ -75,27 +75,27 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.componentsofsignup {
+.componentsoflogin {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.componentsofsignup input:hover {
+.componentsoflogin input:hover {
     transform: scale(1.05); /* Slight enlargement on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Alternatively, you can target them individually if needed */
-#username:hover, #password:hover {
+#usernameoflogin:hover, #passwordoflogin:hover {
     transform: scale(1.05); /* Slight enlargement on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.componentsofsignup input {
+.componentsoflogin input {
     height: 60px;
     width: 290px;
     outline: none;
@@ -108,7 +108,7 @@
     margin-left: 50px;
 }
 
-.register-btn {
+.Login-btn {
     background-color: rgb(252, 251, 248);
     position: relative;
     color: rgb(23, 23, 23);
@@ -128,7 +128,7 @@
     height: 50px;
 }
 
-.register-btn:hover {
+.Login-btn:hover {
     background-color: rgb(250, 213, 4);
     transform: scale(1.05);
     color: white;
@@ -139,7 +139,7 @@
     transform: scale(0.95);
 }
 
-.terms {
+.termsoflogin{
     font-size: 14px;
     z-index: 4;
     position: relative;
@@ -148,12 +148,12 @@
     color: black;
 }
 
-.terms a {
+.termsoflogin a {
     color: black;
     text-decoration: none;
 }
 
-.terms a:hover {
+.termsoflogin a:hover {
     color: white;
     text-decoration: underline;
 }
