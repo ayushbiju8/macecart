@@ -83,15 +83,15 @@
 }
 
 .componentsofsignup input:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+    transform: scale(1.01); /* Slight enlargement on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Alternatively, you can target them individually if needed */
 #username:hover, #password:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+    transform: scale(1.01); /* Slight enlargement on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -104,8 +104,9 @@
     border-radius: 5px;
     box-sizing: border-box;
     margin-bottom: 40px;
-    padding-left: 30%;
+    /* padding-left: 20px; */
     margin-left: 50px;
+    text-align: center;
 }
 
 .register-btn {
