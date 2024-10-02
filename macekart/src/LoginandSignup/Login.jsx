@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Login.css"
+import { signInWithEmailAndPassword } from "firebase/auth"
+import { auth } from "../firebase/Firbase"
+import {useNavigate} from "react-router-dom"
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </link>
 function Login() {
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  const navigate = useNavigate();
+  const login = async ()=>{
+    try {
+      await signInWithEmailAndPassword(auth,email,password);
+      navigate("/");
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode=='auth/wrong-password') {
+        alert("Wrong Password")
+      }else if (errorCode === 'auth/user-not-found') {
+        alert("User does not exist");
+      }else {
+        console.error("Error signing in: ", errorMessage);
+        alert("Error signing in: ", errorMessage);
+      }
+    }
+  };
   return (
     <div>
       <div className="body">
@@ -12,23 +35,22 @@ function Login() {
           </div>
           <div className="RIGHT">
             <div className="title">
-              <p className="subheadingoflogin">Welcome To</p>
-              <p className="headingoflogin">MACEKART</p>      
-          </div>
+              <p className="subheading">Welcome To</p>
+              <p className="heading">MACEKART</p>            </div>
 
-            <div className="containeroflogin">
-              <div className="componentsoflogin">
-                  <input type="text" id="usernameoflogin" name="usernameoflogin" placeholder="Username" />
-                  <input type="password" id="passwordoflogin" name="passwordoflogin" placeholder="Password" />
+            <div className="container">
+              <div className="componentsofsignup">
+                  <input type="text" id="username" name="username" placeholder="Username" />
+                  <input type="password" id="password" name="password" placeholder="Password" />
 
               </div>
             </div>
-            <div className="termsofLogin">
+            <div className="terms">
               <a href="#">Forgot Password</a>
             </div>
 
             <div className="LOGIN">
-              <button className="Login-btn">LOGIN</button>
+              <button className="register-btn">LOGIN</button>
             </div>
           </div>
 
@@ -37,5 +59,4 @@ function Login() {
     </div>
   )
 }
-
 export default Login
