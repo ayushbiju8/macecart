@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@400;700&display=swap');
 
-
+/* Main Page Styles */
 .FirstPage {
     background-color: black;
     width: 100%;
@@ -31,7 +31,7 @@
     align-items: center;
 }
 
-/* Buttons and tabs styling */
+/* Buttons and Tabs Styling */
 .tabbuttonoffirstpage {
     padding: 10px;
     padding-left: 30px;
@@ -63,13 +63,13 @@
     padding: 17px;
     border-radius: 100px;
     cursor: pointer;
-    transition: transform 0.1s, background-color 0.3s;
-    border: none;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .SHOPNOWinFrontpage:hover {
-    background-color: #f1c40f;
-    transform: scale(1.1);
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .SHOPNOWinFrontpage:active {
@@ -77,12 +77,12 @@
     transform: scale(0.95);
 }
 
-/* Main body container for scrolling */
+/* Main Body Content for Scrolling */
 .mainbodyoffirst {
     display: flex;
     flex-direction: row;
     width: 100%;
-    overflow: hidden; /* Hide the scroll bar */
+    overflow: hidden;
     scroll-behavior: smooth;
     position: relative;
 }
@@ -90,26 +90,30 @@
 .mainbodyoffirstpage,
 .mainbodyofsecondpage,
 .mainbodyofthirdpage {
-    min-width: 100vw; /* Full screen width for each slide */
+    min-width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-top: 100px;
 }
 
-/* Scroll button styling */
+/* Scroll Buttons Styling */
 .scroll-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     border: none;
     color: white;
     font-size: 2rem;
     cursor: pointer;
     z-index: 10;
     padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.2s, transform 0.2s;
 }
+
+
 
 .scroll-button.left {
     left: 10px;
@@ -119,12 +123,15 @@
     right: 10px;
 }
 
-/* Messages in main body */
+
+
+
 .messagesinmainbody {
     color: white;
     transform: rotate(-10deg);
 }
 
+/* Typography */
 .vintagecoll {
     font-family: 'Pacifico', cursive;
     font-weight: 200;
@@ -134,6 +141,9 @@
 .sneakersale {
     color: #f1c40f;
     font-size: 90px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .halfprice {
@@ -142,59 +152,97 @@
     margin-top: 40px;
     transform: rotate(10deg);
     font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 .buttoninmainbody {
     display: flex;
-    position: relative;
-    margin-top: 30px;
     justify-content: center;
+    margin-top: 60px;
 }
 
+/* Images */
 img {
     width: 500px;
     height: 500px;
+    border-radius: 100px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .logoinfirstpage {
-        font-size: 16px;
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    img {
+        width: 300px;
+        height: 300px;
     }
 
-    .tablinks {
-        font-size: 16px;
-        padding: 10px;
+    .vintagecoll {
+        font-size: 40px;
     }
 
-    .SHOPNOWinFrontpage {
-        padding: 14px;
-        font-size: 16px;
+    .sneakersale {
+        font-size: 60px;
     }
 
-    .taboffirstpage {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .logoinfirstpage {
-        margin-bottom: 10px;
+    .halfprice {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .logoinfirstpage {
-        font-size: 14px;
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .vintagecoll {
+        font-size: 30px;
+    }
+
+    .sneakersale {
+        font-size: 40px;
+    }
+
+    .halfprice {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 300px) {
+    .vintagecoll {
+        font-size: 25px;
+    }
+
+    .sneakersale {
+        font-size: 35px;
+    }
+
+    .halfprice {
+        font-size: 12px;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
     }
 
     .tablinks {
         font-size: 14px;
-        padding: 8px;
+        padding: 10px;
     }
 
     .SHOPNOWinFrontpage {
-        padding: 16px;
-        font-size: 16px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .scroll-button {
+        font-size: 1.5rem;
+        padding: 5px;
     }
 }
